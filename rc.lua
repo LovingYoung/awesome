@@ -269,7 +269,7 @@ end
 
 --{{
 local tools = {
-    terminal = "sakura",
+    terminal = "gnome-terminal",
     system = {
         filemanager = "pcmanfm",
         taskmanager = "lxtask",
@@ -280,19 +280,19 @@ local tools = {
     },
 }
 
-tools.browser.primary = os.getenv("BROWSER") or "firefox"
-tools.browser.secondary = ({chromium="firefox", firefox="chromium"})[tools.browser.primary]
+--tools.browser.primary = os.getenv("BROWSER") or "firefox"
+--tools.browser.secondary = ({chromium="firefox", firefox="chromium"})[tools.browser.primary]
 
 -- alternative: override
---tools.browser.primary = "google-chrome-stable"
---tools.browser.secondary = "firefox"
+tools.browser.primary = "google-chrome-stable"
+tools.browser.secondary = "firefox"
 
-tools.editor.primary = os.getenv("EDITOR") or "gvim"
-tools.editor.secondary = ({emacs="gvim", gvim="emacs"})[tools.editor.primary]
+--tools.editor.primary = os.getenv("EDITOR") or "gvim"
+--tools.editor.secondary = ({emacs="gvim", gvim="emacs"})[tools.editor.primary]
 
 -- alternative: override
---tools.editor.primary = "gvim"
---tools.editor.secondary = "emacs"
+tools.editor.primary = "gvim"
+tools.editor.secondary = "emacs"
 
 local myapp = nil
 do
